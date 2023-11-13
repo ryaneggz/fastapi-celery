@@ -1,4 +1,5 @@
 fastapi
+fastapi-admin
 uvicorn
 celery[redis]
 flower

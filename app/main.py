@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 from app.worker import test_task, celery_app
+from fastapi_admin.app import app as admin_app
 
 app = FastAPI()
+
+app.mount("/admin", admin_app)
 
 @app.post("/task")
 def create_task(x: int, y: int):
